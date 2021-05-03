@@ -1,3 +1,7 @@
 #+TITLE: Hades
 #+AUTHOR: Christopher James Hayward
 #+EMAIL: chris@chrishayward.xyz
+
+* Tasks
+
++ [ ] Add the adafruit libraries to the pipenv
