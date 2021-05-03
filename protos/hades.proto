@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "/hades";
+option java_package = "com.github.chayward1.hades";
+
+package hades;
+
+service Hades {
+  rpc Read(Zone) returns (stream Zone);
+  rpc Write(Zone) returns (Zone);
+}
+
+message Zone {
+  string name = 1;
+  int64 updated = 2;
+  int32 temperature = 3;
+  int32 humidity = 4;
+}
