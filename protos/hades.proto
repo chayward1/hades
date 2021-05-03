@@ -5,7 +5,7 @@ option java_package = "com.github.chayward1.hades";
 
 package hades;
 
-service Hades {
+service ZoneInfo {
   rpc Read(Zone) returns (stream Zone);
   rpc Write(Zone) returns (Zone);
 }

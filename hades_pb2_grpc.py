@@ -5,7 +5,7 @@ import grpc
 import hades_pb2 as hades__pb2
 
 
-class HadesStub(object):
+class ZoneInfoStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,18 +15,18 @@ class HadesStub(object):
             channel: A grpc.Channel.
         """
         self.Read = channel.unary_stream(
-                '/hades.Hades/Read',
+                '/hades.ZoneInfo/Read',
                 request_serializer=hades__pb2.Zone.SerializeToString,
                 response_deserializer=hades__pb2.Zone.FromString,
                 )
         self.Write = channel.unary_unary(
-                '/hades.Hades/Write',
+                '/hades.ZoneInfo/Write',
                 request_serializer=hades__pb2.Zone.SerializeToString,
                 response_deserializer=hades__pb2.Zone.FromString,
                 )
 
 
-class HadesServicer(object):
+class ZoneInfoServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def Read(self, request, context):
@@ -42,7 +42,7 @@ class HadesServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_HadesServicer_to_server(servicer, server):
+def add_ZoneInfoServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Read': grpc.unary_stream_rpc_method_handler(
                     servicer.Read,
@@ -56,12 +56,12 @@ def add_HadesServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'hades.Hades', rpc_method_handlers)
+            'hades.ZoneInfo', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class Hades(object):
+class ZoneInfo(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -75,7 +75,7 @@ class Hades(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/hades.Hades/Read',
+        return grpc.experimental.unary_stream(request, target, '/hades.ZoneInfo/Read',
             hades__pb2.Zone.SerializeToString,
             hades__pb2.Zone.FromString,
             options, channel_credentials,
@@ -92,7 +92,7 @@ class Hades(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/hades.Hades/Write',
+        return grpc.experimental.unary_unary(request, target, '/hades.ZoneInfo/Write',
             hades__pb2.Zone.SerializeToString,
             hades__pb2.Zone.FromString,
             options, channel_credentials,

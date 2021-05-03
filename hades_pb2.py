@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'\n\032com.github.chayward1.hadesZ\006/hades',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0bhades.proto\x12\x05hades\"L\n\x04Zone\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07updated\x18\x02 \x01(\x03\x12\x13\n\x0btemperature\x18\x03 \x01(\x05\x12\x10\n\x08humidity\x18\x04 \x01(\x05\x32N\n\x05Hades\x12\"\n\x04Read\x12\x0b.hades.Zone\x1a\x0b.hades.Zone0\x01\x12!\n\x05Write\x12\x0b.hades.Zone\x1a\x0b.hades.ZoneB$\n\x1a\x63om.github.chayward1.hadesZ\x06/hadesb\x06proto3'
+  serialized_pb=b'\n\x0bhades.proto\x12\x05hades\"L\n\x04Zone\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07updated\x18\x02 \x01(\x03\x12\x13\n\x0btemperature\x18\x03 \x01(\x05\x12\x10\n\x08humidity\x18\x04 \x01(\x05\x32Q\n\x08ZoneInfo\x12\"\n\x04Read\x12\x0b.hades.Zone\x1a\x0b.hades.Zone0\x01\x12!\n\x05Write\x12\x0b.hades.Zone\x1a\x0b.hades.ZoneB$\n\x1a\x63om.github.chayward1.hadesZ\x06/hadesb\x06proto3'
 )
 
 
@@ -90,19 +90,19 @@ _sym_db.RegisterMessage(Zone)
 
 DESCRIPTOR._options = None
 
-_HADES = _descriptor.ServiceDescriptor(
-  name='Hades',
-  full_name='hades.Hades',
+_ZONEINFO = _descriptor.ServiceDescriptor(
+  name='ZoneInfo',
+  full_name='hades.ZoneInfo',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=100,
-  serialized_end=178,
+  serialized_end=181,
   methods=[
   _descriptor.MethodDescriptor(
     name='Read',
-    full_name='hades.Hades.Read',
+    full_name='hades.ZoneInfo.Read',
     index=0,
     containing_service=None,
     input_type=_ZONE,
@@ -112,7 +112,7 @@ _HADES = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Write',
-    full_name='hades.Hades.Write',
+    full_name='hades.ZoneInfo.Write',
     index=1,
     containing_service=None,
     input_type=_ZONE,
@@ -121,8 +121,8 @@ _HADES = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_HADES)
+_sym_db.RegisterServiceDescriptor(_ZONEINFO)
 
-DESCRIPTOR.services_by_name['Hades'] = _HADES
+DESCRIPTOR.services_by_name['ZoneInfo'] = _ZONEINFO
 
 # @@protoc_insertion_point(module_scope)
