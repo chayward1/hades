@@ -1,0 +1,3 @@
+#+TITLE: Hades
+#+AUTHOR: Christopher James Hayward
+#+EMAIL: chris@chrishayward.xyz
